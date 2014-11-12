@@ -1,0 +1,69 @@
+{
+  "name": "biojs-rest-ensembl",
+  "description": "rest api for ensembl",
+  "version": "0.0.3",
+  "homepage": "http://biojs.net/",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/daviddao/biojs-rest-ensembl"
+  },
+  "author": {
+    "name": "Kieron Taylor",
+    "email": "biojs-technical@googlegroups.com"
+  },
+  "dependencies": {
+    "nets": "^1.0.0"
+  },
+  "devDependencies": {
+    "assert": "^1.1.1",
+    "browserify": "~4.2.0",
+    "chai": "^1.9.1",
+    "coveralls": "~2.11.1",
+    "debug": "^1.0.3",
+    "istanbul": "~0.3.0",
+    "mocha": "~1.20.1",
+    "mocha-lcov-reporter": "0.0.1",
+    "should": "^4.0.4",
+    "uglify-js": "~2.4.15",
+    "underscore": "^1.6.0"
+  },
+  "keywords": [
+    "biojs", "rest", "ensembl"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && rm -rf ./coverage",
+    "coveralls": "istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage",
+    "build-docs": "docco ./index.js",
+    "build-browser": "browserify browser.js  | uglifyjs  > build/biojs_rest_ensembl.min.js"
+  },
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/biojs/biojs2/issues"
+  },
+  "_id": "biojs-rest-ensembl@0.0.2",
+  "_shasum": "df01daee846b9160e5df8c96524a308fa0f6e78e",
+  "_from": "biojs-rest-ensembl@*",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "nerdstrike",
+    "email": "ktaylor@ebi.ac.uk"
+  },
+  "maintainers": [
+    {
+      "name": "ddao",
+      "email": "contact.daviddao@gmail.com"
+    },
+    {
+      "name": "nerdstrike",
+      "email": "ktaylor@ebi.ac.uk"
+    }
+  ],
+  "dist": {
+    "shasum": "df01daee846b9160e5df8c96524a308fa0f6e78e",
+    "tarball": "http://registry.npmjs.org/biojs-rest-ensembl/-/biojs-rest-ensembl-0.0.2.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/biojs-rest-ensembl/-/biojs-rest-ensembl-0.0.2.tgz"
+}
